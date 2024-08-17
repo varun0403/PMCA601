@@ -1,0 +1,55 @@
+<html>
+    <style>
+        button:hover{
+            background-color:brown;
+        }
+        .body{
+            border: 2px solid black;
+            padding: 10px;
+            margin:auto;
+            width:25%;
+        }
+    </style>
+    <body>
+        <div class="body">
+            <input type="result" id="res"><br><br>
+            <button id="one" onclick="val_append('1')">1</button>
+            <button id="two" onclick="val_append('2')">2</button>
+            <button id="three" onclick="val_append('3')">3</button>
+            <button onclick="val_append('+')">+</button><br><br>
+            <button id="four" onclick="val_append('4')">4</button>
+            <button id="five" onclick="val_append('5')">5</button>
+            <button id="six" onclick="val_append('6')">6</button>
+            <button onclick="val_append('-')">-</button><br><br>
+            <button id="seven" onclick="val_append('7')">7</button>
+            <button id="eight" onclick="val_append('8')">8</button>
+            <button id="nine" onclick="val_append('9')">9</button>
+            <button onclick="val_append('*')">*</button><br><br>
+            <button onclick="calc()">=</button>
+            <button onclick="val_append('/')">/</button>
+            <button onclick="clear_()">CL</button>
+            <button onclick="clear_all()">C</button>
+        </div>
+        <script>
+            var content = "";
+            
+            function val_append(txt){
+                content += txt;
+                document.getElementById("res").value = content;
+            }
+            function calc(){
+                let ans = eval(content);
+                document.getElementById("res").value = ans;
+            }
+            function clear_(){
+                let temp = content.slice(0, -1);
+                content = temp;
+                document.getElementById("res").value = content;
+            }
+            function clear_all(){
+                content = "";
+                document.getElementById("res").value = content;
+            }
+        </script>
+    </body>
+</html>
