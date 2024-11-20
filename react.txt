@@ -1,0 +1,16 @@
+npm init
+Type yes
+npm install
+npm install vite
+npm init vite
+enter file name, react, javascript
+run rhe following cmd
+link is reqdy to be viewed
+
+Create server folder
+
+npm install express mongoose cors nodemon
+
+Create client
+
+npm install axios bootstrap react-router-dom
